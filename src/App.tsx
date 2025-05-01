@@ -13,7 +13,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<DiskScheduling />} />
-        <Route path="/disk-scheduling" element={<DiskScheduling />} />
         <Route path="/process-scheduling" element={<ProcessScheduling />} />
         <Route path="/deadlock" element={<Deadlock />} />
         {/* <Route path="/memory" element={<Memory />} /> */}
