@@ -1,0 +1,20 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .input-chart-grid {
+    display: block;
+  }
+  
+  .input-chart-grid > div:first-child {
+    margin-bottom: 50px;
+  }
+  
+  .input-chart-grid > div {
+    /* max-width: 420px; */
+    /* min-width: 320px; */
+    margin-left: auto;
+    margin-right: auto;
+  }

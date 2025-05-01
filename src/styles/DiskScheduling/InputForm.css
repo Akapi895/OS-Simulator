@@ -1,0 +1,104 @@
+.input-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px 0 rgba(37, 99, 235, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+    padding: 2rem 1.5rem;
+    border: 1px solid #e5e7eb;
+    transition: box-shadow 0.2s;
+  }
+  
+  .input-form:hover {
+    box-shadow: 0 12px 32px 0 rgba(37, 99, 235, 0.18), 0 3px 12px 0 rgba(0,0,0,0.12);
+  }
+  
+  .input-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-row:not(:first-child) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .input-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .input-col label {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: #2563eb;
+    letter-spacing: 0.5px;
+  }
+  
+  .input-col input,
+  .input-col select {
+    padding: 0.45rem 0.7rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    background: #fff;
+    transition: border 0.2s, box-shadow 0.2s;
+    font-size: 1rem;
+  }
+  
+  .input-col input:focus,
+  .input-col select:focus {
+    border: 1.5px solid #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 2px #93c5fd55;
+  }
+  
+  .visualize-btn {
+      padding: 0.4rem 2.2rem;
+      background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.97rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+      letter-spacing: 1.5px;
+      transition: 
+        background 0.3s, 
+        box-shadow 0.2s, 
+        transform 0.1s;
+      position: relative;
+      overflow: hidden;
+      }
+  
+  .visualize-btn::after {
+      content: "";
+      position: absolute;
+      left: -75%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+      transform: skewX(-20deg);
+      transition: left 0.5s;
+  }
+  
+  .visualize-btn:hover {
+      background: linear-gradient(90deg, #1d4ed8 0%, #38bdf8 100%);
+      box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.25);
+  }
+  
+  .visualize-btn:hover::after {
+      left: 120%;
+  }
+  
+  .visualize-btn:active {
+      transform: scale(0.97);
+  }

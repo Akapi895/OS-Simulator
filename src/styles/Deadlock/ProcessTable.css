@@ -1,0 +1,90 @@
+.process-table {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.08);
+  padding: 20px 24px 16px 24px;
+  margin-bottom: 28px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.process-table h3 {
+  color: #2563eb;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.process-buttons {
+  margin-bottom: 10px;
+}
+.process-buttons button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 6px;
+  padding: 4px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.process-buttons button:hover {
+  background: #1d4ed8;
+}
+.tabs {
+  margin-bottom: 10px;
+}
+.tabs button {
+  background: #e0e7ff;
+  color: #2563eb;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 6px;
+  padding: 6px 18px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.tabs button.active,
+.tabs button:hover {
+  background: #2563eb;
+  color: #fff;
+}
+.process-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.process-table th,
+.process-table td {
+  padding: 8px 10px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+.process-table th {
+  background: #e0e7ff;
+  color: #2563eb;
+  font-weight: 700;
+}
+.process-table td {
+  background: #fff;
+  font-weight: 500;
+}
+.process-table input[type="number"] {
+  width: 60px;
+  padding: 3px 6px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+}
+.process-table input[type="number"]:focus {
+  border: 1.5px solid #2563eb;
+  outline: none;
+}

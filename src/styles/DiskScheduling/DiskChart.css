@@ -1,0 +1,71 @@
+.disk-chart {
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px 0 rgba(37, 99, 235, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+    padding: 2rem 1.5rem;
+    border: 1px solid #e5e7eb;
+    transition: box-shadow 0.2s;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .disk-chart:hover {
+    box-shadow: 0 12px 32px 0 rgba(37, 99, 235, 0.18), 0 3px 12px 0 rgba(0,0,0,0.12);
+  }
+  
+  .disk-chart h2 {
+    color: #2563E9;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    margin-top: -9px;
+  }
+  
+  .disk-chart .overflow-x-auto {
+    border-radius: 12px;
+    background: #f3f4f6;
+    padding: 1rem 0.5rem;
+  }
+  
+  .disk-chart svg {
+    border-radius: 12px;
+    background: #f3f4f6;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .disk-chart text {
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  
+  .disk-chart .track {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    background: #e0e7ff;
+    border-radius: 50%;
+  }
+  
+  .disk-chart .starvation-warning {
+    color: #ef4444;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .disk-chart .total-distance {
+    color: #2563eb;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  .input-form {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .input-form > div {
+    flex: 1;
+  }

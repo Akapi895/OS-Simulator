@@ -1,0 +1,62 @@
+.request-form {
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.08);
+  padding: 20px 24px 16px 24px;
+  margin-bottom: 28px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.request-form h4 {
+  color: #2563eb;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.request-form label {
+  font-weight: 500;
+  color: #222;
+  margin-right: 16px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.request-form select,
+.request-form input[type="number"] {
+  margin-left: 6px;
+  padding: 3px 8px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+}
+.request-form input[type="number"]:focus,
+.request-form select:focus {
+  border: 1.5px solid #2563eb;
+  outline: none;
+}
+.request-form button[type="submit"], .request-form button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 6px 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+.request-form button[type="submit"]:hover, .request-form button:hover {
+  background: #1d4ed8;
+}
+.request-form h5 {
+  margin: 8px 0 4px 0;
+  color: #2563eb;
+  font-size: 1rem;
+  font-weight: 600;
+}

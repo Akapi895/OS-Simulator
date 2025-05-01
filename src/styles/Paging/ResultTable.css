@@ -1,0 +1,80 @@
+.paging-result-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 24px 24px 16px 24px;
+}
+
+.paging-result-table h3 {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.paging-result-table > div {
+  font-size: 1rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.paging-result-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f8fafc;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.paging-result-table th,
+.paging-result-table td {
+  padding: 8px 10px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.paging-result-table th {
+  background: #e0e7ff;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.paging-result-table tr:last-child td {
+  border-bottom: none;
+}
+
+.paging-result-table td {
+  background: #fff;
+  font-weight: 500;
+}
+
+.paging-result-table td span {
+  font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+}
+
+.paging-result-table td[style*="color: green"] {
+  background: #dcfce7;
+}
+
+.paging-result-table td[style*="color: red"] {
+  background: #fee2e2;
+}
+
+@media (max-width: 700px) {
+  .paging-result-table {
+    padding: 10px 4px;
+    font-size: 0.95rem;
+  }
+  .paging-result-table th,
+  .paging-result-table td {
+    padding: 5px 4px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,136 @@
+.paging-chart-container {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 24px 24px 16px 24px;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paging-chart-title {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.paging-chart-header-row {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.paging-chart-header-cell {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 36px;
+  min-height: 36px;
+  max-height: 36px;
+  box-sizing: border-box;
+  height: 24px;
+  text-align: center;
+  align-content: center;
+  font-weight: 600;
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
+  background: #f1f5fb;
+  border-radius: 6px 6px 0 0;
+  margin-right: 2px;
+}
+
+.paging-chart-frame-index-col {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2px;
+}
+
+.paging-chart-frame-index-cell {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 36px;
+  min-height: 36px;
+  max-height: 36px;
+  box-sizing: border-box;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  background: #f3f4f6;
+  border-right: 2px solid #2563eb;
+  border-bottom: 1px solid #e5e7eb;
+  color: #2563eb;
+  border-radius: 6px 0 0 6px;
+}
+
+.paging-chart-frame-index-cell:last-child {
+  border-bottom: 2px solid #2563eb;
+}
+
+.paging-chart-memory-row {
+  display: flex;
+}
+
+.paging-chart-memory-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.paging-chart-memory-cell {
+  width: 40px;
+  height: 36px;
+  height: 36px;
+  min-height: 36px;
+  max-height: 36px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  color: #222;
+  transition: background 0.2s, color 0.2s;
+}
+
+.paging-chart-memory-cell.new {
+  background: #bbf7d0;
+  font-weight: 700;
+  color: #166534;
+}
+
+.paging-chart-stats {
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #2563eb;
+  font-weight: 600;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .paging-chart-container {
+    padding: 10px 4px;
+  }
+  .paging-chart-header-cell,
+  .paging-chart-frame-index-cell,
+  .paging-chart-memory-cell {
+    width: 28px;
+    height: 24px;
+    font-size: 13px;
+    padding: 0;
+  }
+  .paging-chart-title {
+    font-size: 1.1rem;
+  }
+  .paging-chart-stats {
+    font-size: 0.95rem;
+    gap: 1rem;
+  }
+}

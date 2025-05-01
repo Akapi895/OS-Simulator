@@ -1,0 +1,77 @@
+.paging-input-form {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 24px auto;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px 0 rgba(37, 99, 235, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+
+.paging-input-form:hover {
+  box-shadow: 0 12px 32px 0 rgba(37, 99, 235, 0.18), 0 3px 12px 0 rgba(0,0,0,0.12);
+}
+
+.paging-input-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.paging-input-form label {
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+  color: #2563eb;
+  letter-spacing: 0.5px;
+}
+
+.paging-input-form input,
+.paging-input-form select {
+  padding: 0.45rem 0.7rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+  font-size: 1rem;
+}
+
+.paging-input-form input:focus,
+.paging-input-form select:focus {
+  border: 1.5px solid #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px #93c5fd55;
+}
+
+.paging-input-form button[type="submit"] {
+  padding: 0.5rem 2.2rem;
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+  letter-spacing: 1.5px;
+  transition: 
+    background 0.3s, 
+    box-shadow 0.2s, 
+    transform 0.1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.paging-input-form button[type="submit"]:hover {
+  background: linear-gradient(90deg, #1d4ed8 0%, #38bdf8 100%);
+  box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.25);
+}
+
+.paging-input-form button[type="submit"]:active {
+  transform: scale(0.97);
+}
