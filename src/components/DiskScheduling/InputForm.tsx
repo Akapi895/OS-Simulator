@@ -42,7 +42,7 @@ const InputForm: React.FC<InputFormProps> = ({
   const handleRequestsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setRequestInput(e.target.value);
     const nums = e.target.value
-      .split(',')
+      .split(/\s+/)
       .map(s => s.trim())
       .filter(s => s !== '')
       .map(Number)
@@ -89,7 +89,7 @@ const InputForm: React.FC<InputFormProps> = ({
           <label>Requests</label>
           <input
             type="text"
-            placeholder="e.g. 55, 58, 39"
+            placeholder="e.g. 55 58 39"
             value={requestInput}
             onChange={handleRequestsChange}
           />

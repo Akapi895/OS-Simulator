@@ -18,7 +18,7 @@ const ProcessScheduling = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Process Scheduling Algorithms</h1>
+      <h1 className="text-2xl font-bold mb-4">CPU Scheduling Algorithms</h1>
       <div className="input-chart-grid">
         <div>
           <InputForm

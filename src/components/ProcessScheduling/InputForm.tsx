@@ -29,10 +29,10 @@ const InputForm: React.FC<Props> = ({
   const [priorityInput, setPriorityInput] = useState('');
 
   const handleProcessInput = () => {
-    const arrivals = arrivalInput.split(',').map(s => Number(s.trim()));
-    const bursts = burstInput.split(',').map(s => Number(s.trim()));
+    const arrivals = arrivalInput.split(/\s+/).map(s => Number(s.trim()));
+    const bursts = burstInput.split(/\s+/).map(s => Number(s.trim()));
     const priorities = priorityInput
-      ? priorityInput.split(',').map(s => Number(s.trim()))
+      ? priorityInput.split(/\s+/).map(s => Number(s.trim()))
       : [];
 
     // Không kiểm tra số lượng ở đây nữa
@@ -67,10 +67,10 @@ const InputForm: React.FC<Props> = ({
       className="input-form"
       onSubmit={e => {
         e.preventDefault();
-        const arrivals = arrivalInput.split(',').map(s => Number(s.trim()));
-        const bursts = burstInput.split(',').map(s => Number(s.trim()));
+        const arrivals = arrivalInput.split(/\s+/).map(s => Number(s.trim()));
+        const bursts = burstInput.split(/\s+/).map(s => Number(s.trim()));
         const priorities = priorityInput
-          ? priorityInput.split(',').map(s => Number(s.trim()))
+          ? priorityInput.split(/\s+/).map(s => Number(s.trim()))
           : [];
         if (
           arrivals.length !== bursts.length ||
@@ -88,7 +88,7 @@ const InputForm: React.FC<Props> = ({
           <label>Arrival Times</label>
           <input
             type="text"
-            placeholder="e.g. 0, 2, 4"
+            placeholder="e.g. 0 2 4"
             value={arrivalInput}
             onChange={e => handleInputChange(setArrivalInput, e.target.value, 'arrival')}
           />
@@ -97,7 +97,7 @@ const InputForm: React.FC<Props> = ({
           <label>Durations</label>
           <input
             type="text"
-            placeholder="e.g. 5, 3, 2"
+            placeholder="e.g. 5 3 2"
             value={burstInput}
             onChange={e => handleInputChange(setBurstInput, e.target.value, 'duration')}
           />
