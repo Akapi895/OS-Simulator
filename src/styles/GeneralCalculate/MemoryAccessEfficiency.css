@@ -1,0 +1,109 @@
+.mae-container,
+.amat-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 24px auto;
+  padding: 2rem 1.5rem;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px 0 rgba(37, 99, 235, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+
+.mae-container:hover,
+.amat-container:hover {
+  box-shadow: 0 12px 32px 0 rgba(37, 99, 235, 0.18), 0 3px 12px 0 rgba(0,0,0,0.12);
+}
+
+.mae-container h3,
+.amat-container h3 {
+  color: #2563eb;
+  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.mae-row,
+.amat-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.mae-row label,
+.amat-row label {
+  flex: 1 0 120px;
+  flex: 1 0 160px;
+  font-weight: 500;
+  color: #2563eb;
+  letter-spacing: 0.5px;
+}
+
+.mae-row input,
+.amat-row input,
+.mae-row select,
+.amat-row select {
+  padding: 0.45rem 0.7rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+  font-size: 1rem;
+  max-width: 130px;
+}
+
+.mae-row input:focus,
+.amat-row input:focus,
+.mae-row select:focus,
+.amat-row select:focus {
+  border: 1.5px solid #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px #93c5fd55;
+}
+
+.mae-btn,
+.amat-btn {
+  padding: 0.5rem 2.2rem;
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+  letter-spacing: 1.5px;
+  transition: 
+    background 0.3s, 
+    box-shadow 0.2s, 
+    transform 0.1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.mae-btn:hover,
+.amat-btn:hover {
+  background: linear-gradient(90deg, #1d4ed8 0%, #38bdf8 100%);
+  box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.25);
+}
+
+.mae-btn:active,
+.amat-btn:active {
+  transform: scale(0.97);
+}
+
+.mae-result,
+.amat-result {
+  margin-top: 18px;
+  font-size: 1.1rem;
+  color: #2563eb;
+  font-weight: 600;
+}

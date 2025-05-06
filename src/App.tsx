@@ -6,6 +6,7 @@ import ProcessScheduling from './pages/ProcessScheduling';
 import Deadlock from './pages/Deadlock';
 // import Memory from './pages/MemoryManage';
 import Paging from './pages/Paging';
+import GeneralCalculate from './pages/GeneralCalculate';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/deadlock" element={<Deadlock />} />
         {/* <Route path="/memory" element={<Memory />} /> */}
         <Route path="/paging" element={<Paging />} /> 
+        <Route path="/general-calculate" element={<GeneralCalculate />} /> 
       </Routes>
     </Router>
   );
