@@ -6,6 +6,7 @@ const navItems = [
   // { to: '/memory', label: 'Memory Management' },
   { to: '/paging', label: 'Paging Replacement' },
   { to: '/disk-scheduling', label: 'Disk Scheduling' },
+  { to: '/general-calculate', label: 'General Calculation' },
 ];
 
 const Header = () => {

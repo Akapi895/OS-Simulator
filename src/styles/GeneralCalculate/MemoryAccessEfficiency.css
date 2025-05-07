@@ -23,6 +23,7 @@
 .amat-container h3 {
   color: #2563eb;
   margin-bottom: 0.7rem;
+  margin-top: -10px;
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -102,8 +103,49 @@
 
 .mae-result,
 .amat-result {
-  margin-top: 18px;
+  margin-top: 0px;
   font-size: 1.1rem;
-  color: #2563eb;
+  color: red;
   font-weight: 600;
+}
+
+.disk-transfer-calc .mae-button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.mae-btn-secondary {
+  background: #e5e7eb;
+  color: #2563eb;
+  font-weight: 700;
+  border: 1.5px solid #2563eb;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mae-btn-secondary:hover {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.disk-transfer-result {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.disk-transfer-result h4 {
+  margin-bottom: 8px;
+  color: #2563eb;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.disk-transfer-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 18px;
+  align-items: center;
 }

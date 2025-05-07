@@ -24,6 +24,7 @@
 .amat-container h3 {
   color: #2563eb;
   margin-bottom: 0.7rem;
+  margin-top: -10px;
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -102,8 +103,8 @@
 
 .mae-result,
 .amat-result {
-  margin-top: 18px;
+  margin-top: 0px;
   font-size: 1.1rem;
-  color: #2563eb;
+  color: red;
   font-weight: 600;
 }
