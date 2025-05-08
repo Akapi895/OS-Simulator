@@ -2,6 +2,15 @@ import React from 'react';
 import { PagingResult } from '../../logic/Paging/types';
 import '../../styles/Paging/ResultTable.css';
 
+// Hàm chuyển chữ cái về số (A→1, B→2, ..., AA→27)
+function mapLetterToNumber(s: string): number {
+  let result = 0;
+  for (let i = 0; i < s.length; i++) {
+    result = result * 26 + (s.charCodeAt(i) - 64);
+  }
+  return result;
+}
+
 interface Props {
   result: PagingResult;
 }
@@ -20,6 +29,7 @@ const ResultTable: React.FC<Props> = ({ result }) => {
         <b>Hits:</b> {result.totalHit} &nbsp; | &nbsp;
         <b>Hit Rate:</b> {(result.totalHit / result.steps.length * 100).toFixed(2)}%
       </div>
+      
       <div style={{ overflowX: 'auto', marginTop: 16 }}>
         <table>
           <thead>
@@ -76,6 +86,88 @@ const ResultTable: React.FC<Props> = ({ result }) => {
             ))}
           </tbody>
         </table>
+      </div>
+
+      <div>
+        <div style={{ margin: '8px 0' }}>
+          <b>Fault pages (Trang lỗi):</b>
+          <div style={{ marginLeft: 16 }}>
+            <div>
+              <b>- char:</b>{' '}
+              {result.steps
+                .filter(s => !s.hit)
+                .map((s, idx, arr) => (
+                  <span key={idx} style={{ color: 'red', fontWeight: 600 }}>
+                    {s.page}
+                    {idx < arr.length - 1 && ', '}
+                  </span>
+                ))}
+            </div>
+            <div>
+              <b>- num:</b>{' '}
+              {result.steps
+                .filter(s => !s.hit)
+                .map((s, idx, arr) => (
+                  <span key={idx} style={{ color: 'red', fontWeight: 600 }}>
+                    {mapLetterToNumber(s.page)}
+                    {idx < arr.length - 1 && ', '}
+                  </span>
+                ))}
+            </div>
+            <div>
+              <b>- Trường hợp page sequence chứa 0: num - 1:</b>{' '}
+              {result.steps
+                .filter(s => !s.hit)
+                .map((s, idx, arr) => (
+                  <span key={idx} style={{ color: 'red', fontWeight: 600 }}>
+                    {mapLetterToNumber(s.page) - 1}
+                    {idx < arr.length - 1 && ', '}
+                  </span>
+                ))}
+            </div>
+          </div>
+        </div>
+        <div style={{ margin: '8px 0' }}>
+          <b>Replaced pages (Nạn nhân sẽ bị tráo đổi):</b>
+          <div style={{ marginLeft: 16 }}>
+            <div>
+              <b>- char:</b>{' '}
+              {result.steps
+                .map(s => s.replaced)
+                .filter(r => r !== undefined && r !== null && r !== '')
+                .map((r, idx, arr) => (
+                  <span key={idx} style={{ color: 'red', fontWeight: 600 }}>
+                    {r}
+                    {idx < arr.length - 1 && ', '}
+                  </span>
+                ))}
+            </div>
+            <div>
+              <b>- num:</b>{' '}
+              {result.steps
+                .map(s => s.replaced)
+                .filter(r => r !== undefined && r !== null && r !== '')
+                .map((r, idx, arr) => (
+                  <span key={idx} style={{ color: 'red', fontWeight: 600 }}>
+                    {mapLetterToNumber(r as string)}
+                    {idx < arr.length - 1 && ', '}
+                  </span>
+                ))}
+            </div>
+            <div>
+              <b>- Trường hợp page sequence chứa 0: num - 1:</b>{' '}
+              {result.steps
+                .map(s => s.replaced)
+                .filter(r => r !== undefined && r !== null && r !== '')
+                .map((r, idx, arr) => (
+                  <span key={idx} style={{ color: 'red', fontWeight: 600 }}>
+                    {mapLetterToNumber(r as string) - 1}
+                    {idx < arr.length - 1 && ', '}
+                  </span>
+                ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
