@@ -18,7 +18,7 @@ export const scan = (
     // Đi xuống: về phía 0, rồi quay lại bên phải
     for (let r of left) path.push(r);
 
-    if ((left.length === 0 || left[0] !== 0) && startPosition !== 0) path.push(0);
+    if (!left.includes(0) && startPosition !== 0) path.push(0);
 
     if (right.length > 0 && (path[path.length - 1] !== right[0])) {
       idleSegments.push({

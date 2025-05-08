@@ -29,7 +29,12 @@ export const cscan = (
         fromIdx: path.length - 1,
         toIdx: path.length,
       });
-      path.push(0);
+      if (
+        (left.length === 0 || !left.includes(0)) &&
+        startPosition !== 0
+      ) {
+        path.push(0);
+      }
     }
 
     for (let r of left) path.push(r);
@@ -40,7 +45,11 @@ export const cscan = (
 
     for (let r of left) path.push(r);
 
-    if ((left.length === 0 || left[0] !== 0) && startPosition !== 0) {
+    // Chỉ thêm 0 nếu chưa có request ở 0 và startPosition != 0
+    if (
+      (left.length === 0 || !left.includes(0)) &&
+      startPosition !== 0
+    ) {
       path.push(0);
     }
 

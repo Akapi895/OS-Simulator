@@ -5,6 +5,7 @@ import { AlgorithmResult, IdleSegment } from '../../logic/DiskScheduling/types';
 interface Props {
   result: AlgorithmResult;
   maxTrack: number;
+  requests: number[];
 }
 
 const chartWidth = 1000;
@@ -12,7 +13,7 @@ const margin = 20;
 const rulerHeight = 80;
 const rowSpacing = 48;
 
-const DiskChart: React.FC<Props> = ({ result, maxTrack }) => {
+const DiskChart: React.FC<Props> = ({ result, maxTrack, requests }) => {
   const { path, starvationSteps, idleSegments } = result as AlgorithmResult & { idleSegments?: IdleSegment[] };
   const minTrack = 0; // Luôn bắt đầu từ 0
   // maxTrack lấy từ prop
@@ -147,6 +148,15 @@ const DiskChart: React.FC<Props> = ({ result, maxTrack }) => {
       </div>
       <div className="total-distance">
         <strong>Tổng quãng đường di chuyển:</strong> {result.totalDistance}
+      </div>
+      <div className="served-order" style={{ margin: '12px 0', fontSize: 16 }}>
+        <strong>Thứ tự yêu cầu được phục vụ:</strong>{' '}
+        {result.path
+          .filter((track, idx) =>
+            idx !== 0 && requests.includes(track)
+          )
+          .join(', ')
+        }
       </div>
       {starvationSteps && starvationSteps.length > 0 && (
         <div className="starvation-warning">

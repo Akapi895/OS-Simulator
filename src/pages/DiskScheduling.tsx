@@ -62,7 +62,7 @@ const DiskScheduling = () => {
           />
         </div>
         <div>
-          {result && <DiskChart result={result} maxTrack={maxTrack} />}
+          {result && <DiskChart result={result} maxTrack={maxTrack} requests={requests} />}
         </div>
       </div>
     </div>
